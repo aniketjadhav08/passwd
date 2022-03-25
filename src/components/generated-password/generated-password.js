@@ -15,9 +15,11 @@ function GeneratedPassword({ generatedPass, passwordStrength }) {
             {generatedPass}
           </span>
         </Paragraph>
-        <Paragraph>
-          <span className="password-strength-text">{passwordStrength}</span>
-        </Paragraph>
+        {generatedPass.length > 0 && (
+          <Paragraph>
+            <span className="password-strength-text">{passwordStrength}</span>
+          </Paragraph>
+        )}
       </div>
     </div>
   );
