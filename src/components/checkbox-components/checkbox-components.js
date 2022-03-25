@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Checkbox } from "antd";
 import { generatePasswordUtility } from "../../utils/index";
-import GeneratedPassword from "../generated-password/generated-password";
 import "./checkbox-components.css";
 
 function CheckboxComponents({
