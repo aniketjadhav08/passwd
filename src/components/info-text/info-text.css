@@ -1,0 +1,19 @@
+.tool-heading {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.tool-description {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.selection-description {
+  margin-top: 2%;
+  font-size: 1.2rem;
+}
+
+.ant-divider {
+  border-top: 0.2rem solid #000000;
+}

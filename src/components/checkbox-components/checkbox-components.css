@@ -1,0 +1,13 @@
+.password-params .ant-checkbox-wrapper span {
+  font-size: 1.2rem !important;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.ant-checkbox {
+  top: 0em;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: #0e6476;
+}
