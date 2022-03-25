@@ -4,7 +4,6 @@ import "./password-size-slider.css";
 
 function PasswordSizeSlider({
   setPasswordBackground,
-  passwordBackground,
   passLen,
   setPassLen,
   setPasswordStrength,
