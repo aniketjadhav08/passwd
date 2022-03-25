@@ -2,7 +2,7 @@
   "name": "passwd",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://aniketjadhav08.github.io",
+  "homepage": "https://aniketjadhav08.github.io/passwd",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
