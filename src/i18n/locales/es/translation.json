@@ -1,0 +1,13 @@
+{
+  "PASSWORD GENERATOR TOOL": "HERRAMIENTA GENERADORA DE CONTRASEÑAS",
+  "Generate a secure random password instantly with online password generator": "Genere una contraseña aleatoria segura al instante con el generador de contraseñas en línea",
+  "Use the slider to lengthen your password and select from the options below to strengthen the security": "Utilice el control deslizante para alargar su contraseña y seleccione una de las opciones siguientes para reforzar la seguridad",
+  "Lowercase Characters": "Caracteres minúsculos",
+  "Uppercase Characters": "Caracteres mayúsculos",
+  "Symbols": "Simbología",
+  "Numbers": "Números",
+  "Password Length": "Duración de la contraseña",
+  "Strong password": "Contraseña sólida",
+  "Fairly strong password": "Contraseña bastante fuerte",
+  "Weak password": "Contraseña débil"
+}
