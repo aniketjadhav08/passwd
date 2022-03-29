@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Slider } from "antd";
+import { useTranslation, withTranslation } from "react-i18next";
 import "./password-size-slider.css";
 
 function PasswordSizeSlider({
@@ -8,6 +9,7 @@ function PasswordSizeSlider({
   setPassLen,
   setPasswordStrength,
 }) {
+  const { t } = useTranslation();
   useEffect(() => {
     setBackgroundCode(passLen);
     setPasswordStrengthText(passLen);
@@ -29,11 +31,11 @@ function PasswordSizeSlider({
 
   const setPasswordStrengthText = (value) => {
     if (value >= 1 && value <= 6) {
-      setPasswordStrength("Weak password");
+      setPasswordStrength(t("Weak password"));
     } else if (value > 6 && value <= 8) {
-      setPasswordStrength("Fairly strong password");
+      setPasswordStrength(t("Fairly strong password"));
     } else {
-      setPasswordStrength("Strong password");
+      setPasswordStrength(t("Strong password"));
     }
   };
 
@@ -45,7 +47,9 @@ function PasswordSizeSlider({
   return (
     <div>
       <div>
-        <span className="password-length">Password Length {passLen}</span>
+        <span className="password-length">
+          {t("Password Length")} {passLen}
+        </span>
       </div>
       <div className="password-slider-root-div">
         <Slider
@@ -63,4 +67,4 @@ function PasswordSizeSlider({
   );
 }
 
-export default PasswordSizeSlider;
+export default withTranslation()(PasswordSizeSlider);

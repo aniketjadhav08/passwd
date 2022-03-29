@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Checkbox } from "antd";
 import { generatePasswordUtility } from "../../utils/index";
+import { useTranslation, withTranslation } from "react-i18next";
 import "./checkbox-components.css";
 
 function CheckboxComponents({
@@ -9,6 +10,8 @@ function CheckboxComponents({
   passLen,
   setGeneratedPass,
 }) {
+  const { t } = useTranslation();
+
   useEffect(() => {
     generateRandomPassword();
   }, [passParam, passLen]);
@@ -18,10 +21,10 @@ function CheckboxComponents({
     setPassParam(checkedValues);
   }
   const plainOptions = [
-    { label: "Lowercase Characters", value: "LC" },
-    { label: "Uppercase Characters", value: "UC" },
-    { label: "Symbols", value: "S" },
-    { label: "Numbers", value: "N" },
+    { label: t("Lowercase Characters"), value: "LC" },
+    { label: t("Uppercase Characters"), value: "UC" },
+    { label: t("Symbols"), value: "S" },
+    { label: t("Numbers"), value: "N" },
   ];
 
   const generateRandomPassword = () => {
@@ -38,4 +41,4 @@ function CheckboxComponents({
   );
 }
 
-export default CheckboxComponents;
+export default withTranslation()(CheckboxComponents);

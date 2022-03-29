@@ -1,0 +1,13 @@
+{
+  "PASSWORD GENERATOR TOOL": "ГЕНЕРАТОР ПАРОЛЕЙ",
+  "Generate a secure random password instantly with online password generator": "Генерируйте безопасный случайный пароль мгновенно с помощью онлайн-генератора паролей",
+  "Use the slider to lengthen your password and select from the options below to strengthen the security": "Используйте ползунок для удлинения пароля и выберите один из вариантов ниже для усиления защиты",
+  "Lowercase Characters": "Строчные знаки",
+  "Uppercase Characters": "Прописные знаки",
+  "Symbols": "Знаки",
+  "Numbers": "Числа",
+  "Password Length": "Длина фразы",
+  "Strong password": "Надежный пароль",
+  "Fairly strong password": "Достаточно надежный пароль",
+  "Weak password": "Слабый пароль"
+}
