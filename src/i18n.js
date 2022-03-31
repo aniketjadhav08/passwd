@@ -32,7 +32,7 @@ const resources = {
 
 /* istanbul ignore next */
 i18n
-  //   .use(LanguageDetector)
+  .use(LanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     // the translations

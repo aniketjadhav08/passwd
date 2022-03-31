@@ -1,24 +1,26 @@
 import React from "react";
-import { Divider } from "antd";
+import SiteLogo from "../../assets/images/sitelogo.png";
 import { useTranslation, withTranslation } from "react-i18next";
 import "./info-text.css";
 
-function InfoText() {
+function InfoText({ passwordBackground }) {
   const { t } = useTranslation();
   return (
     <>
-      {/* <Divider /> */}
-      <div className="info-text-root-div">
-        <div className="tool-heading">{t("PASSWORD GENERATOR TOOL")}</div>
-        <div className="tool-description">
-          {t(
-            "Generate a secure random password instantly with online password generator"
-          )}
+      <div
+        className="info-text-root-div"
+        style={{ background: passwordBackground }}
+      >
+        <div className="site-logo">
+          <img alt="Site-logo" src={SiteLogo} width={"80%"} />
         </div>
-        <div className="selection-description">
-          {t(
-            "Use the slider to lengthen your password and select from the options below to strengthen the security"
-          )}
+        <div className="site-info">
+          <div className="tool-heading">{t("PASSWORD GENERATOR TOOL")}</div>
+          <div className="tool-description">
+            {t(
+              "Generate a secure random password instantly with online password generator"
+            )}
+          </div>
         </div>
       </div>
     </>
