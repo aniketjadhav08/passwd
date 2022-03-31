@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Layout, Select } from "antd";
+
 import CheckboxComponents from "../components/checkbox-components/checkbox-components";
 import PasswordSizeSlider from "../components/password-size-slider/password-size-slider";
 import GeneratedPassword from "../components/generated-password/generated-password";
-import InfoText from "../components/info-text/info-text";
-import i18n from "../i18n";
+import SiteIllustration from "../assets/images/siteillustration.png";
+import { useTranslation, withTranslation } from "react-i18next";
 import "./password-generator.css";
 
 function PasswordGenerator({
@@ -13,47 +13,32 @@ function PasswordGenerator({
   setPasswordStrength,
   passwordStrength,
 }) {
-  const { Header } = Layout;
-  const { Option } = Select;
   const [passParam, setPassParam] = useState([]);
   const [passLen, setPassLen] = useState(9);
   const [generatedPass, setGeneratedPass] = useState("");
-  const [language, setLanguage] = useState("en");
 
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
-    setLanguage(lang);
-  };
+  const { t } = useTranslation();
+
   return (
     <>
-      <Header
-        style={{
-          background: passwordBackground,
-          textAlign: "center",
-          display: "flex",
-        }}
+      <div
+        className="password-generator-root-div"
+        style={{ background: passwordBackground }}
       >
-        <div className="logo-space">logo</div>
-        <div className="header-space">
-          <h1 className="page-header">
-            <div className="page-title">PASSWD</div>
-          </h1>
-        </div>
-        <div className="options-space">
-          <Select
-            onChange={handleLanguageChange}
-            value={language}
-            className="language-selector"
-          >
-            <Option value="en">English</Option>
-            <Option value="rus">Russian</Option>
-            <Option value="es">Spanish</Option>
-          </Select>
-        </div>
-      </Header>
-      <div className="password-generator-root-div">
-        <InfoText />
         <div className="checkbox-and-slider">
+          <div className="site-illustration">
+            <img
+              alt="site-illustration"
+              src={SiteIllustration}
+              width={"14%"}
+              height={"14%"}
+            />
+          </div>
+          <div className="selection-description">
+            {t(
+              "Use the slider to lengthen your password and select from the options below to strengthen the security"
+            )}
+          </div>
           <CheckboxComponents
             setPassParam={setPassParam}
             passParam={passParam}
@@ -77,4 +62,4 @@ function PasswordGenerator({
   );
 }
 
-export default PasswordGenerator;
+export default withTranslation()(PasswordGenerator);

@@ -1,0 +1,16 @@
+.application-footer-root-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.github-mention {
+  padding: 3%;
+}
+
+.email-mention {
+  padding: 3%;
+}
