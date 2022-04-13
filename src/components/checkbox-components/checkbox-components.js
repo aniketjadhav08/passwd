@@ -17,7 +17,6 @@ function CheckboxComponents({
   }, [passParam, passLen]);
 
   function onChange(checkedValues) {
-    console.log("checked = ", checkedValues);
     setPassParam(checkedValues);
   }
   const plainOptions = [

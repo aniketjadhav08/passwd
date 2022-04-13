@@ -1,12 +1,18 @@
 import React from "react";
 import { Typography, Button, message } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
+import ReactGA from "react-ga";
+
 import "./generated-password.css";
 
 function GeneratedPassword({ generatedPass, passwordStrength }) {
   const { Paragraph } = Typography;
 
   const copyFunction = () => {
+    ReactGA.event({
+      category: "Generated Password",
+      action: `User pressed copy icon with password strength as ${passwordStrength}`,
+    });
     const copyText = document.getElementById("generated-pass-id").textContent;
     navigator.clipboard.writeText(copyText);
     message.success("Password copied to clipboard");

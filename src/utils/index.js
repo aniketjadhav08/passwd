@@ -59,12 +59,6 @@ var numbersZeroToNine = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var selectedSpecialCharacters = ["@", "&", "$", "!", "#", "?"];
 
 function generatePasswordUtility(passParam, passLen) {
-  console.log(
-    "there is a change=",
-    passParam,
-    passLen,
-    Math.floor(passLen / passParam.length)
-  );
   let pwdArr = [];
   let rootCount = Math.floor(passLen / passParam.length);
   for (let passChars in passParam) {
@@ -125,7 +119,6 @@ function generatePasswordUtility(passParam, passLen) {
 
   randomArrayShuffle(pwdArr);
 
-  //   console.log("pwd check=", pwdArr.join(""), pwdArr.length, passLen);
   return pwdArr.join("");
 }
 
