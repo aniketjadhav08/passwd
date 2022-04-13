@@ -4,9 +4,11 @@ import PageInfo from "./page-info";
 import i18n from "../i18n";
 import PasswordGenerator from "./password-generator";
 import ApplicationFooter from "../components/application-footer/application-footer";
+import ReactGA from "react-ga";
 import "./home-screen.css";
 
 function HomeScreen() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
   const { Header, Footer } = Layout;
   const { Option } = Select;
   const [passwordBackground, setPasswordBackground] = useState("#ffffff");
@@ -15,6 +17,10 @@ function HomeScreen() {
   const [language, setLanguage] = useState("en");
 
   const handleLanguageChange = (lang) => {
+    ReactGA.event({
+      category: "Language",
+      action: `Language switched to ${lang}`,
+    });
     i18n.changeLanguage(lang);
     setLanguage(lang);
   };

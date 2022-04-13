@@ -1,6 +1,7 @@
 import React from "react";
 import SiteLogo from "../../assets/images/sitelogo.png";
 import { GithubOutlined, MailOutlined } from "@ant-design/icons";
+import ReactGA from "react-ga";
 import "./application-footer.css";
 
 function ApplicationFooter() {
@@ -12,6 +13,12 @@ function ApplicationFooter() {
       <div className="other-info">
         <div className="github-mention">
           <a
+            onClick={() =>
+              ReactGA.event({
+                category: "ApplicationFooter",
+                action: "Clicked on Github",
+              })
+            }
             href="https://github.com/aniketjadhav08/passwd"
             style={{ color: "inherit" }}
           >
@@ -20,7 +27,15 @@ function ApplicationFooter() {
           </a>
         </div>
         <div className="email-mention">
-          <MailOutlined style={{ fontSize: "2rem" }} />
+          <MailOutlined
+            style={{ fontSize: "2rem" }}
+            onClick={() =>
+              ReactGA.event({
+                category: "ApplicationFooter",
+                action: "Clicked on email",
+              })
+            }
+          />
           &nbsp;ani.jad.08@gmail.com
         </div>
         <div className="illustration-mention">
