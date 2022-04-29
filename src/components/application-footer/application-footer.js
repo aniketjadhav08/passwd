@@ -1,5 +1,9 @@
 import React from "react";
-import SiteLogo from "../../assets/images/sitelogo.png";
+import SiteLogoPng from "../../assets/images/sitelogo/sitelogo.png";
+import SiteLogoJp2 from "../../assets/images/sitelogo/sitelogo.jp2";
+import SiteLogoJxr from "../../assets/images/sitelogo/sitelogo.jxr";
+import SiteLogoWebp from "../../assets/images/sitelogo/sitelogo.webp";
+import ImgNextGen from "../img-next-gen/img-next-gen";
 import { GithubOutlined, MailOutlined } from "@ant-design/icons";
 import ReactGA from "react-ga";
 import "./application-footer.css";
@@ -8,7 +12,14 @@ function ApplicationFooter() {
   return (
     <div className="application-footer-root-div">
       <div className="footer-logo">
-        <img src={SiteLogo} alt="site-logo" width={"30%"} />
+        <ImgNextGen
+          srcWebp={SiteLogoWebp}
+          srcJrx={SiteLogoJxr}
+          srcJp2={SiteLogoJp2}
+          fallback={SiteLogoPng}
+          alt="site-logo"
+          width={"30%"}
+        />
       </div>
       <div className="other-info">
         <div className="github-mention">

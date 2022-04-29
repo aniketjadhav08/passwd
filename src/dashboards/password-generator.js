@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import CheckboxComponents from "../components/checkbox-components/checkbox-components";
 import PasswordSizeSlider from "../components/password-size-slider/password-size-slider";
 import GeneratedPassword from "../components/generated-password/generated-password";
-import SiteIllustration from "../assets/images/siteillustration.png";
+import ImgNextGen from "../components/img-next-gen/img-next-gen";
+import SiteIllustrationJp2 from "../assets/images/siteillustration/siteillustration.jp2";
+import SiteIllustrationJxr from "../assets/images/siteillustration/siteillustration.jxr";
+import SiteIllustrationPng from "../assets/images/siteillustration/siteillustration.png";
+import SiteIllustrationWebp from "../assets/images/siteillustration/siteillustration.webp";
 import { useTranslation, withTranslation } from "react-i18next";
 import "./password-generator.css";
 
@@ -27,11 +31,14 @@ function PasswordGenerator({
       >
         <div className="checkbox-and-slider">
           <div className="site-illustration">
-            <img
+            <ImgNextGen
+              srcWebp={SiteIllustrationWebp}
+              srcJrx={SiteIllustrationJxr}
+              srcJp2={SiteIllustrationJp2}
+              fallback={SiteIllustrationPng}
               alt="site-illustration"
-              src={SiteIllustration}
-              width={"14%"}
-              height={"14%"}
+              height={"15%"}
+              width={"15%"}
             />
           </div>
           <div className="selection-description">
